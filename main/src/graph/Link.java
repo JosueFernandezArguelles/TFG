@@ -1,5 +1,7 @@
 package graph;
 
+import java.util.Objects;
+
 public class Link {
     private Node start;
     private Node end;
@@ -10,4 +12,9 @@ public class Link {
         this.end = end;
         this.value = value;
     }
+
+    public boolean equals(Node start, Node end) {
+        return this.start == start && this.end == end;
+    }
+
 }
