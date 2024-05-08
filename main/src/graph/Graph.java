@@ -6,6 +6,14 @@ import java.util.*;
 
 public class Graph {
 
+    private final int MIN_NODES = 10;
+    private final int MAX_NODES = 31;
+    private final int MIN_LINK_VALUE = 1;
+    private final int MAX_LINK_VALUE = 5;
+    private final int MIN_NEIGHBOURS = 1;
+    private final int MAX_NEIGHBOURS = 5;
+
+
     private Map<Node, List<Link>> graph;
     private Random random = new Random();
 
@@ -47,12 +55,13 @@ public class Graph {
 
     /**
      * Genera un grafo de manera totalemente aleatoria, con un número de nodos aleatorio
-     * entre 10 y 30, y unos enlacen aleatorios teniendo cada nodo entre 1 y 4 vecinos,
-     * cada uno con un enlace de valor entre 1 y 4.
+     * entre MIN_NODES y MAX_NODES, y unos enlacen aleatorios teniendo cada nodo entre
+     * MIN_NEIGHBOURS y MAX_NEIGHBOURS vecinos, cada uno con un enlace de valor entre
+     * MIN_LINK_VALUE y MAX_LINK_VALUE.
      * @return
      */
-    public Graph generateRandomGraph(){
-        int nodes = random.nextInt(10,31);
+    public void generateRandomGraph(){
+        int nodes = random.nextInt(MIN_NODES,MAX_NODES);
         List<Node> list = new ArrayList<>();
 
         //Generación aleatoria de nodos
@@ -64,13 +73,12 @@ public class Graph {
 
         //Generación aleatoria de enlaces
         for (int i = 0; i < nodes; i++ ){
-            generateRandomLinks(random.nextInt(1, 5), list.get(i), list );
+            generateRandomLinks(random.nextInt(MIN_NEIGHBOURS, MAX_NEIGHBOURS), list.get(i), list );
         }
-        return this;
     }
 
     /**
-     * Genera un enlace
+     * Genera tantos enlaces como neighbours se pasen como parámetro al nodo n.
      * @param neighbours
      * @param n
      * @param list
@@ -79,13 +87,13 @@ public class Graph {
         for (int i = 0; i < neighbours; i++ ){
             Node possibleNeighbour = list.get(random.nextInt(list.size()));
             if( !Checker.existsLink(possibleNeighbour, n, graph) ){
-                addLink(n, possibleNeighbour, random.nextInt(1, 5));
+                addLink(n, possibleNeighbour, random.nextInt(MIN_LINK_VALUE, MAX_LINK_VALUE));
             }
         }
     }
 
     /**
-     * Prints the nodes and the links of the graph
+     * Escribe en pantalla los nodos y enlaces del grafo.
      */
     public void printGraph(){
         graph.forEach( (n, l) -> {System.out.println(n + "\n"); System.out.println(l+ "\n");} );

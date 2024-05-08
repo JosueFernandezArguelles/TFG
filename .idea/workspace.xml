@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="ToString method of Graph, Node and Link">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="Documentation">
+      <change beforePath="$PROJECT_DIR$/main/src/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714988400157</updated>
       <workItem from="1714988401225" duration="6033000" />
-      <workItem from="1715163183113" duration="1102000" />
+      <workItem from="1715163183113" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of the main data structures.">
       <option name="closed" value="true" />
@@ -91,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715163689122</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Documentation">
+      <option name="closed" value="true" />
+      <created>1715164948233</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715164948233</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +109,7 @@
     <MESSAGE value="Creation of the main data structures." />
     <MESSAGE value="Random generation of nodes and links." />
     <MESSAGE value="ToString method of Graph, Node and Link" />
-    <option name="LAST_COMMIT_MESSAGE" value="ToString method of Graph, Node and Link" />
+    <MESSAGE value="Documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
   </component>
 </project>
