@@ -84,6 +84,9 @@ public class Graph {
         }
     }
 
+    /**
+     * Prints the nodes and the links of the graph
+     */
     public void printGraph(){
         graph.forEach( (n, l) -> {System.out.println(n + "\n"); System.out.println(l+ "\n");} );
     }
