@@ -25,4 +25,16 @@ public class Link {
                 ", value=" + value +
                 '}';
     }
+
+    public int getValue(){
+        return this.value;
+    }
+
+    public Node getStart() {
+        return start;
+    }
+
+    public Node getEnd() {
+        return end;
+    }
 }
