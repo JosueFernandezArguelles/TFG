@@ -84,5 +84,8 @@ public class Graph {
         }
     }
 
+    public void printGraph(){
+        graph.forEach( (n, l) -> {System.out.println(n + "\n"); System.out.println(l+ "\n");} );
+    }
 
 }

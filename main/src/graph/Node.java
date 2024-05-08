@@ -10,4 +10,11 @@ public class Node {
     public int getValor() {
         return this.valor;
     }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "valor=" + valor +
+                '}';
+    }
 }

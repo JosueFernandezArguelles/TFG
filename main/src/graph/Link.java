@@ -17,4 +17,12 @@ public class Link {
         return this.start == start && this.end == end;
     }
 
+    @Override
+    public String toString() {
+        return "Link{" +
+                "start=" + start +
+                ", end=" + end +
+                ", value=" + value +
+                '}';
+    }
 }
