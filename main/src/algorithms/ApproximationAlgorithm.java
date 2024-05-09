@@ -31,6 +31,10 @@ public class ApproximationAlgorithm {
                     distance = l.getValue();
                 }
             }
+            if(next == null){
+                System.out.println("No se puede hacer el recorrido completo");
+                break;
+            }
             visited.add(next);
             current = next;
             totalDistance += distance;

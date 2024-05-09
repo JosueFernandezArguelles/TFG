@@ -6,12 +6,12 @@ import java.util.*;
 
 public class Graph {
 
-    private final int MIN_NODES = 100;
-    private final int MAX_NODES = 120;
+    private final int MIN_NODES = 7;
+    private final int MAX_NODES = 8;
     private final int MIN_LINK_VALUE = 5;
     private final int MAX_LINK_VALUE = 10;
-    private final int MIN_NEIGHBOURS = 30;
-    private final int MAX_NEIGHBOURS = 40;
+    private final int MIN_NEIGHBOURS = 5;
+    private final int MAX_NEIGHBOURS = 6;
 
 
     private Map<Node, List<Link>> graph;
@@ -108,17 +108,4 @@ public class Graph {
     public void printGraph(){
         graph.forEach( (n, l) -> {System.out.println(n + "\n"); System.out.println(l+ "\n");} );
     }
-    
-    public Link closest(Node node){
-        int distance = Integer.MAX_VALUE;
-        Link toRet = null;
-        for (Link l : getLinks(node)){
-            if(l.getValue() < distance){
-                toRet = l;
-                distance = l.getValue();
-            }
-        }
-        return toRet;
-    }
-
 }
