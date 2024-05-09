@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="Algoritmo aproximado">
+    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="Algoritmo de fuerza bruta">
+      <change afterPath="$PROJECT_DIR$/main/src/algorithms/AbstractAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/src/algorithms/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/algorithms/ApproximationAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/ApproximationAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/Link.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/util/Checker.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/ApproximationAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/ApproximationAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/BruteForce.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/BruteForce.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/graph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/graph/Link.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/graph/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/util/Checker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -72,7 +84,7 @@
       <updated>1714988400157</updated>
       <workItem from="1714988401225" duration="6033000" />
       <workItem from="1715163183113" duration="15900000" />
-      <workItem from="1715244665221" duration="3225000" />
+      <workItem from="1715244665221" duration="10883000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of the main data structures.">
       <option name="closed" value="true" />
@@ -122,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715184711884</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Algoritmo de fuerza bruta">
+      <option name="closed" value="true" />
+      <created>1715253275602</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715253275602</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +155,7 @@
     <MESSAGE value="Documentation" />
     <MESSAGE value="Añadir constantes" />
     <MESSAGE value="Algoritmo aproximado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Algoritmo aproximado" />
+    <MESSAGE value="Algoritmo de fuerza bruta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algoritmo de fuerza bruta" />
   </component>
 </project>

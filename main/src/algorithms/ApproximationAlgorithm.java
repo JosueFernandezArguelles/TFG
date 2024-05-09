@@ -1,48 +1,28 @@
 package algorithms;
 
 import graph.Graph;
-import graph.Link;
-import graph.Node;
+import java.util.Random;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class ApproximationAlgorithm {
-
-    private Graph graph;
-    private List<Node> visited = new ArrayList<>();
-    private int totalDistance = 0;
-
+public class ApproximationAlgorithm extends AbstractAlgorithm{
     public ApproximationAlgorithm(Graph g){
-        this.graph = g;
+        super(g);
     }
 
-    public void TSPApproximation(){
-        List<Node> nodes = graph.getNodes();
+    public void TSP(){
+        int currentNode = new Random().nextInt(0, graph.length);
 
-        Node current = nodes.get(0);
-
-        while(visited.size() != nodes.size()){
-            int distance = Integer.MAX_VALUE;
-            Node next = null;
-            for( Link l : graph.getLinks(current)){
-                if( !visited.contains( l.getEnd() ) && l.getValue() < distance){
-                    next = l.getEnd();
-                    distance = l.getValue();
+        while(visited.size() != graph.length){
+            int shortest = Integer.MAX_VALUE;
+            int nextNode = 0;
+            for(int j = 0; j < graph[0].length; j++){
+                if( currentNode != j && !visited.contains(j) && graph[currentNode][j] < shortest ) {
+                    shortest = graph[currentNode][j];
+                    nextNode = j;
                 }
             }
-            if(next == null){
-                System.out.println("No se puede hacer el recorrido completo");
-                break;
-            }
-            visited.add(next);
-            current = next;
-            totalDistance += distance;
+            visited.add(nextNode);
+            totalDistance += shortest;
+            currentNode = nextNode;
         }
-    }
-
-    public void result(){
-        System.out.println(visited);
-        System.out.println("Distancia total: " + totalDistance);
     }
 }
