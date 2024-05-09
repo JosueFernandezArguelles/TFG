@@ -1,58 +1,50 @@
 package algorithms;
-
 import graph.Graph;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
 public class BruteForce extends AbstractAlgorithm{
-
     public BruteForce(Graph g){
         super(g);
     }
 
     public void TSP(){
         int n = graph.length;
-        int[] mejorCamino = null;
-        int mejorCosto = Integer.MAX_VALUE;
-        int[] puntos = new int[n];
+        int[] bestPath = null;
+        int bestCost = Integer.MAX_VALUE;
+        int[] nodes = new int[n];
         for (int i = 0; i < n; i++) {
-            puntos[i] = i;
+            nodes[i] = i;
         }
 
-        // Generar todas las permutaciones posibles de puntos
-        List<List<Integer>> todasPermutaciones = permute(puntos);
-
         // Calcular costo para cada permutación y encontrar el mínimo
-        for (List<Integer> perm : todasPermutaciones) {
+        for (List<Integer> perm : permute(nodes)) {
             int[] permArray = new int[n];
             for (int i = 0; i < n; i++) {
                 permArray[i] = perm.get(i);
             }
-            int costoActual = calcularCosto(permArray, graph);
-            if (costoActual < mejorCosto) {
-                mejorCosto = costoActual;
-                mejorCamino = permArray;
+            int currentCost = calculateCost(permArray, graph);
+            if (currentCost < bestCost) {
+                bestCost = currentCost;
+                bestPath = permArray;
             }
         }
-        this.totalDistance = mejorCosto;
-        assert mejorCamino != null;
-        for(int i : mejorCamino){
+        this.totalDistance = bestCost;
+        assert bestPath != null;
+        for(int i : bestPath){
             this.visited.add(i);
         }
     }
 
-    private int calcularCosto(int[] camino, int[][] matrizCostos) {
-        int costoTotal = 0;
-        for (int i = 0; i < camino.length - 1; i++) {
-            int origen = camino[i];
-            int destino = camino[i + 1];
-            costoTotal += matrizCostos[origen][destino];
+    private int calculateCost(int[] path, int[][] matrixCosts) {
+        int totalCost = 0;
+        for (int i = 0; i < path.length - 1; i++) {
+            int origen = path[i];
+            int destino = path[i + 1];
+            totalCost += matrixCosts[origen][destino];
         }
         // Suma el costo de retorno al punto inicial
-        costoTotal += matrizCostos[camino[camino.length - 1]][camino[0]];
-        return costoTotal;
+        totalCost += matrixCosts[path[path.length - 1]][path[0]];
+        return totalCost;
     }
 
     private List<List<Integer>> permute(int[] nums) {

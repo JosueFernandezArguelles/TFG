@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Graph {
 
-    private final int MIN_NODES = 10;
-    private final int MAX_NODES = 12;
-    private final int MIN_LINK_VALUE = 6;
-    private final int MAX_LINK_VALUE = 10;
+    private final int MIN_NODES = 18;
+    private final int MAX_NODES = 19;
+    private final int MIN_LINK_VALUE = 4;
+    private final int MAX_LINK_VALUE = 8;
 
     private int [][] graph;
     private Random rand = new Random();
