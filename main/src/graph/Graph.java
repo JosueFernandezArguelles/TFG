@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Graph {
 
-    private final int MIN_NODES = 18;
-    private final int MAX_NODES = 19;
+    private final int MIN_NODES = 13;
+    private final int MAX_NODES = 14;
     private final int MIN_LINK_VALUE = 4;
     private final int MAX_LINK_VALUE = 8;
 

@@ -22,10 +22,16 @@ public class Main {
 
         //BruteForce
 
+        long start = System.currentTimeMillis();
+
         BruteForce bf = new BruteForce(graph);
         bf.TSP();
         System.out.println(bf.getTotalDistance());
         System.out.println(bf.getVisited());
+
+        double end = (System.currentTimeMillis() - start)/1000.000;
+
+        System.out.println(end);
 
         /*
         try {

@@ -7,7 +7,7 @@ public class BruteForce extends AbstractAlgorithm{
         super(g);
     }
 
-    public void TSP(){
+    public void TSP() {
         int n = graph.length;
         int[] bestPath = null;
         int bestCost = Integer.MAX_VALUE;
@@ -16,23 +16,43 @@ public class BruteForce extends AbstractAlgorithm{
             nodes[i] = i;
         }
 
-        // Calcular costo para cada permutación y encontrar el mínimo
-        for (List<Integer> perm : permute(nodes)) {
-            int[] permArray = new int[n];
-            for (int i = 0; i < n; i++) {
-                permArray[i] = perm.get(i);
-            }
-            int currentCost = calculateCost(permArray, graph);
-            if (currentCost < bestCost) {
-                bestCost = currentCost;
-                bestPath = permArray;
+        // Initialize the array to keep track of the permutation index
+        int[] indexes = new int[n];
+
+        int i = 0;
+        while (i < n) {
+            if (indexes[i] < i) {
+                if (i % 2 == 0) {
+                    swap(nodes, 0, i);
+                } else {
+                    swap(nodes, indexes[i], i);
+                }
+
+                int currentCost = calculateCost(nodes, graph);
+                if (currentCost < bestCost) {
+                    bestCost = currentCost;
+                    bestPath = nodes.clone();
+                }
+
+                indexes[i]++;
+                i = 0;
+            } else {
+                indexes[i] = 0;
+                i++;
             }
         }
+
         this.totalDistance = bestCost;
         assert bestPath != null;
-        for(int i : bestPath){
-            this.visited.add(i);
+        for (int j : bestPath) {
+            this.visited.add(j);
         }
+    }
+
+    private void swap(int[] array, int a, int b) {
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
     }
 
     private int calculateCost(int[] path, int[][] matrixCosts) {
@@ -45,24 +65,5 @@ public class BruteForce extends AbstractAlgorithm{
         // Suma el costo de retorno al punto inicial
         totalCost += matrixCosts[path[path.length - 1]][path[0]];
         return totalCost;
-    }
-
-    private List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        backtrack(result, new ArrayList<>(), nums);
-        return result;
-    }
-
-    private void backtrack(List<List<Integer>> result, List<Integer> tempList, int[] nums) {
-        if (tempList.size() == nums.length) {
-            result.add(new ArrayList<>(tempList));
-        } else {
-            for (int num : nums) {
-                if (tempList.contains(num)) continue; // element already exists, skip
-                tempList.add(num);
-                backtrack(result, tempList, nums);
-                tempList.remove(tempList.size() - 1);
-            }
-        }
     }
 }

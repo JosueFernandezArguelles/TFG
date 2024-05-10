@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="Cambiar las estructuras de datos por int[][]">
+    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="Fuerza bruta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/BruteForce.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/BruteForce.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/graph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,8 @@
       <updated>1714988400157</updated>
       <workItem from="1714988401225" duration="6033000" />
       <workItem from="1715163183113" duration="15900000" />
-      <workItem from="1715244665221" duration="15251000" />
+      <workItem from="1715244665221" duration="15287000" />
+      <workItem from="1715332277380" duration="2103000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of the main data structures.">
       <option name="closed" value="true" />
@@ -146,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715281603307</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fuerza bruta">
+      <option name="closed" value="true" />
+      <created>1715293003089</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715293003089</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +170,7 @@
     <MESSAGE value="Algoritmo aproximado" />
     <MESSAGE value="Algoritmo de fuerza bruta" />
     <MESSAGE value="Cambiar las estructuras de datos por int[][]" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiar las estructuras de datos por int[][]" />
+    <MESSAGE value="Fuerza bruta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fuerza bruta" />
   </component>
 </project>
