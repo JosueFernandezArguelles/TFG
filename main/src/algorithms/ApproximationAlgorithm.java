@@ -9,16 +9,20 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
     }
 
     public void TSP(){
+        int startNode = 0;
         int currentNode = 0;
         int nextNode = 0;
 
+        //Falla porque entra en el nodo inicial antes de tiempo
         while(visited.size() != graph.length){
             int shortest = Integer.MAX_VALUE;
 
             for(int j = 0; j < graph[0].length; j++){
-                if( !visited.contains(j) && graph[currentNode][j] < shortest ) {
+                if( currentNode != j && !visited.contains(j) && graph[currentNode][j] < shortest && j != startNode ) {
                     shortest = graph[currentNode][j];
                     nextNode = j;
+                } else if (j == startNode && visited.size() == graph.length - 1) {
+                    shortest = graph[currentNode][startNode];
                 }
             }
             visited.add(nextNode);

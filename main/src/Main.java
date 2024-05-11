@@ -17,7 +17,6 @@ public class Main {
             result += "NÚMERO DE NODOS: " + i + "\n";
             for(int j = 0; j < 50; j++){ //Repeticiones para cada nodo
                 Graph graph = new Graph(i);
-
                 //Approximation
 
                 ApproximationAlgorithm ap = new ApproximationAlgorithm(graph);

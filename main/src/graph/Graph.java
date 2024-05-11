@@ -3,7 +3,7 @@ package graph;
 import java.util.*;
 
 public class Graph {
-    private final int MIN_LINK_VALUE = 1;
+    private final int MIN_LINK_VALUE = 3;
     private final int MAX_LINK_VALUE = 6;
 
     private int [][] graph;
