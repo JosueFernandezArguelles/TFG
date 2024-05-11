@@ -13,7 +13,7 @@ public class Main {
 
         String result = "";
 
-        for (int i = 5; i < 12; i++){ // Número de nodos [5-13]
+        for (int i = 5; i < 14; i++){ // Número de nodos [5-13]
             result += "NÚMERO DE NODOS: " + i + "\n";
             for(int j = 0; j < 50; j++){ //Repeticiones para cada nodo
                 Graph graph = new Graph(i);

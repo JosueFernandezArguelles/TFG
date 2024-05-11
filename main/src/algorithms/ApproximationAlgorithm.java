@@ -13,7 +13,6 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
         int currentNode = 0;
         int nextNode = 0;
 
-        //Falla porque entra en el nodo inicial antes de tiempo
         while(visited.size() != graph.length){
             int shortest = Integer.MAX_VALUE;
 
@@ -21,8 +20,9 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
                 if( currentNode != j && !visited.contains(j) && graph[currentNode][j] < shortest && j != startNode ) {
                     shortest = graph[currentNode][j];
                     nextNode = j;
-                } else if (j == startNode && visited.size() == graph.length - 1) {
+                } else if (j == startNode && visited.size() == graph.length - 1) { //Evita que entre al nodo inicial antes de tiempo
                     shortest = graph[currentNode][startNode];
+                    nextNode = startNode;
                 }
             }
             visited.add(nextNode);
