@@ -22,13 +22,9 @@ public class BruteForce extends AbstractAlgorithm{
         int i = 0;
         while (i < n) {
             if (indexes[i] < i) {
-                if (i % 2 == 0) {
-                    swap(nodes, 0, i);
-                } else {
-                    swap(nodes, indexes[i], i);
-                }
+                swap(nodes, i % 2 == 0 ? 0 : indexes[i], i);
 
-                int currentCost = calculateCost(nodes, graph);
+                int currentCost = calculateCost(nodes);
                 if (currentCost < bestCost) {
                     bestCost = currentCost;
                     bestPath = nodes.clone();
@@ -55,15 +51,13 @@ public class BruteForce extends AbstractAlgorithm{
         array[b] = temp;
     }
 
-    private int calculateCost(int[] path, int[][] matrixCosts) {
+    private int calculateCost(int[] path) {
         int totalCost = 0;
         for (int i = 0; i < path.length - 1; i++) {
-            int origen = path[i];
-            int destino = path[i + 1];
-            totalCost += matrixCosts[origen][destino];
+            totalCost += graph[path[i]][path[i + 1]];
         }
         // Suma el costo de retorno al punto inicial
-        totalCost += matrixCosts[path[path.length - 1]][path[0]];
+        totalCost += graph[path[path.length - 1]][path[0]];
         return totalCost;
     }
 }

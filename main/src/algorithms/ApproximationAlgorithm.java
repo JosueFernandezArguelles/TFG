@@ -9,19 +9,20 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
     }
 
     public void TSP(){
-        int currentNode = new Random().nextInt(0, graph.length);
+        int currentNode = 0;
+        int nextNode = 0;
 
         while(visited.size() != graph.length){
             int shortest = Integer.MAX_VALUE;
-            int nextNode = 0;
+
             for(int j = 0; j < graph[0].length; j++){
-                if( currentNode != j && !visited.contains(j) && graph[currentNode][j] < shortest ) {
+                if( !visited.contains(j) && graph[currentNode][j] < shortest ) {
                     shortest = graph[currentNode][j];
                     nextNode = j;
                 }
             }
             visited.add(nextNode);
-            totalDistance += shortest;
+            totalDistance += shortest != Integer.MAX_VALUE ? shortest : 0;
             currentNode = nextNode;
         }
     }

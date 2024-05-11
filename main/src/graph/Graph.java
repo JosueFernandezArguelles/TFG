@@ -3,17 +3,12 @@ package graph;
 import java.util.*;
 
 public class Graph {
-
-    private final int MIN_NODES = 13;
-    private final int MAX_NODES = 14;
-    private final int MIN_LINK_VALUE = 4;
-    private final int MAX_LINK_VALUE = 8;
+    private final int MIN_LINK_VALUE = 1;
+    private final int MAX_LINK_VALUE = 6;
 
     private int [][] graph;
-    private Random rand = new Random();
 
-    public Graph(){
-        int nodes = rand.nextInt(MIN_NODES, MAX_NODES);
+    public Graph(int nodes){
         this.graph = new int[nodes][nodes];
         generateRandomGraph();
     }
@@ -22,7 +17,7 @@ public class Graph {
         for(int i = 0; i < graph[0].length; i++){
             for(int j = 0; j < graph[0].length; j++){
                 if(graph[i][j] == 0){
-                    int value = rand.nextInt(MIN_LINK_VALUE, MAX_LINK_VALUE);
+                    int value = new Random().nextInt(MIN_LINK_VALUE, MAX_LINK_VALUE);
                     graph[i][j] = value;
                     graph[j][i] = value;
                 }

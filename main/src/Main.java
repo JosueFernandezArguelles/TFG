@@ -2,45 +2,49 @@ import algorithms.ApproximationAlgorithm;
 import algorithms.BruteForce;
 import graph.Graph;
 
+import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 public class Main {
     public static void main(String[] args){
 
-        StringBuilder result = new StringBuilder();
+        String result = "";
 
-        Graph graph = new Graph();
-        graph.printGraph();
+        for (int i = 5; i < 12; i++){ // Número de nodos [5-13]
+            result += "NÚMERO DE NODOS: " + i + "\n";
+            for(int j = 0; j < 50; j++){ //Repeticiones para cada nodo
+                Graph graph = new Graph(i);
 
-        //Approximation
+                //Approximation
 
-        ApproximationAlgorithm ap = new ApproximationAlgorithm(graph);
-        ap.TSP();
-        System.out.println(ap.getTotalDistance());
-        System.out.println(ap.getVisited());
+                ApproximationAlgorithm ap = new ApproximationAlgorithm(graph);
+                double start = System.currentTimeMillis();
+                ap.TSP();
+                double end = (System.currentTimeMillis() - start)/1000.000;
+                result += String.format("Algoritmo aproximado -> distancia: %s, tiempo: %s s \n", ap.getTotalDistance(), end);
 
-        //BruteForce
+                //BruteForce
 
-        long start = System.currentTimeMillis();
+                BruteForce bf = new BruteForce(graph);
+                start = System.currentTimeMillis();
+                bf.TSP();
+                end = (System.currentTimeMillis() - start)/1000.000;
+                result += String.format("Algoritmo de fuerza bruta -> distancia: %s, tiempo: %s s \n", bf.getTotalDistance(), end);
 
-        BruteForce bf = new BruteForce(graph);
-        bf.TSP();
-        System.out.println(bf.getTotalDistance());
-        System.out.println(bf.getVisited());
+                System.out.println("Número de nodos: " + i);
+                System.out.println("Ejecución: " + j);
+            }
+        }
 
-        double end = (System.currentTimeMillis() - start)/1000.000;
-
-        System.out.println(end);
-
-        /*
         try {
             FileWriter fw = new FileWriter("results.txt", true);
-            fw.write(String.valueOf(result));
+            fw.write(result);
             fw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        */
     }
 }
