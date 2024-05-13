@@ -21,19 +21,22 @@ public class Main {
                 Graph graph = new Graph(i);
                 //Approximation
 
+                double start = 0.000;
+                double end = 0.000;
+
                 ApproximationAlgorithm ap = new ApproximationAlgorithm(graph);
-                double start = System.currentTimeMillis();
+                start = System.nanoTime();
                 ap.TSP();
-                double end = (System.currentTimeMillis() - start)/1000.000;
-                resultAP += String.format("%s %ss \n", ap.getTotalDistance(), end);
+                end = (System.nanoTime() - start)/1000000;
+                resultAP += String.format("%s %s \n", ap.getTotalDistance(), end);
 
                 //BruteForce
 
                 BruteForce bf = new BruteForce(graph);
-                start = System.currentTimeMillis();
+                start =  System.nanoTime();
                 bf.TSP();
-                end = (System.currentTimeMillis() - start)/1000.000;
-                resultBF += String.format("%s %ss \n", bf.getTotalDistance(), end);
+                end = (System.nanoTime() - start)/1000000;
+                resultBF += String.format("%s %s \n", bf.getTotalDistance(), end);
 
                 System.out.println("Número de nodos: " + i);
                 System.out.println("Ejecución: " + j);
