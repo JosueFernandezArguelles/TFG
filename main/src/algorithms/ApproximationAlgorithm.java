@@ -1,7 +1,5 @@
 package algorithms;
-
 import graph.Graph;
-import java.util.Random;
 
 public class ApproximationAlgorithm extends AbstractAlgorithm{
     public ApproximationAlgorithm(Graph g){

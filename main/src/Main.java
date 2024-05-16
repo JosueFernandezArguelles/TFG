@@ -1,12 +1,8 @@
 import algorithms.ApproximationAlgorithm;
 import algorithms.BruteForce;
 import graph.Graph;
-
-import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 
 public class Main {
     public static void main(String[] args){

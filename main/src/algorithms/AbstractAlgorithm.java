@@ -1,7 +1,5 @@
 package algorithms;
-
 import graph.Graph;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,9 +16,5 @@ public abstract class AbstractAlgorithm implements Algorithm{
 
     public int getTotalDistance(){
         return this.totalDistance;
-    }
-
-    public List<Integer> getVisited(){
-        return this.visited;
     }
 }
