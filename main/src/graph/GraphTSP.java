@@ -12,7 +12,7 @@ public class GraphTSP extends AbstractGraph{
     }
 
     @Override
-    void doGenerateRandomGraph(int i, int j) {
+    protected void doGenerateRandomGraph(int i, int j) {
         int value = new Random().nextInt(MIN_LINK_VALUE, MAX_LINK_VALUE);
         graph[i][j] = value;
         graph[j][i] = value;

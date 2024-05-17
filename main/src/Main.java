@@ -52,7 +52,7 @@ public class Main {
             throw new RuntimeException(e);
         }*/
 
-        GraphKSAT graphKSAT = new GraphKSAT(10000,10000);
+        GraphKSAT graphKSAT = new GraphKSAT(3,3);
 
         //Approximation
         ApproximationAlgorithm ap = new ApproximationAlgorithm(graphKSAT);
@@ -60,5 +60,9 @@ public class Main {
         System.out.println(ap.isSatisfied());
 
         //Brute Force
+
+        BruteForce bf = new BruteForce(graphKSAT);
+        bf.KSAT();
+        System.out.println(bf.isSatisfied());
     }
 }

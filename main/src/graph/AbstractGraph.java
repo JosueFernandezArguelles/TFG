@@ -15,7 +15,7 @@ public abstract class AbstractGraph implements Graph{
         }
     }
 
-    abstract void doGenerateRandomGraph(int i, int j);
+    protected abstract void doGenerateRandomGraph(int i, int j);
 
     public void printGraph(){
         System.out.println("GRAPH:");

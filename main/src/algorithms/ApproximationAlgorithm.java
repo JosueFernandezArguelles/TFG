@@ -1,12 +1,12 @@
 package algorithms;
 import graph.Graph;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 public class ApproximationAlgorithm extends AbstractAlgorithm{
+
+    private Random rand = new Random();
 
     public ApproximationAlgorithm(Graph g){
         super(g);
@@ -52,9 +52,9 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
             if(satisfied){ break; }
 
             //Cambio aletorio en una variable
-            int variableToBeChanged = new Random().nextInt(0, values[0].length);
+            int variableToBeChanged =rand.nextInt(0, values[0].length);
             while (changedVariables.contains(variableToBeChanged)){
-                variableToBeChanged = new Random().nextInt(0, values[0].length);
+                variableToBeChanged = rand.nextInt(0, values[0].length);
             }
             changedVariables.add(variableToBeChanged);
             int [][] possibleNewValues = randomChange(values, variableToBeChanged);
@@ -100,7 +100,7 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
          int [][] values = new int[graph.length][graph[0].length];
          for(int j = 0; j < graph[0].length; j++){
              //Valor igual para cada variable
-             int value = new Random().nextInt(0,2) < 0.5 ? -1 : 1;
+             int value = rand.nextInt(2) < 0.5 ? -1 : 1;
              for(int i = 0; i < graph.length; i++){
                  if(graph[i][j] != 0){
                      values[i][j] = value;
@@ -108,28 +108,5 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
              }
          }
          return values;
-     }
-
-     private boolean[] generateClauses(int[][] values){
-         boolean[] clauses = new boolean[values.length];
-         for(int i = 0; i < graph.length; i++){
-             for(int j = 0; j < graph[0].length; j++) {
-                 if (graph[i][j] != 0 && graph[i][j] == values[i][j]) {
-                     clauses[i] = true;
-                     break;
-                 }
-             }
-         }
-         return clauses;
-     }
-
-     private int countTrueClauses(boolean [] clauses){
-         int count = 0;
-         for (boolean b : clauses){
-             if (b){
-                 count++;
-             }
-         }
-         return count;
      }
 }

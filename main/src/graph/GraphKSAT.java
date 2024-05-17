@@ -10,7 +10,7 @@ public class GraphKSAT extends AbstractGraph{
     }
 
     @Override
-    void doGenerateRandomGraph(int i, int j) {
+    protected void doGenerateRandomGraph(int i, int j) {
         int value = new Random().nextInt(-1, 2);
         graph[i][j] = value;
     }

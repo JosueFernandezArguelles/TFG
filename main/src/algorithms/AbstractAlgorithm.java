@@ -24,4 +24,27 @@ public abstract class AbstractAlgorithm implements Algorithm{
     public boolean isSatisfied() {
         return this.satisfied;
     }
+
+    protected boolean[] generateClauses(int[][] values){
+        boolean[] clauses = new boolean[values.length];
+        for(int i = 0; i < graph.length; i++){
+            for(int j = 0; j < graph[0].length; j++) {
+                if (graph[i][j] != 0 && graph[i][j] == values[i][j]) {
+                    clauses[i] = true;
+                    break;
+                }
+            }
+        }
+        return clauses;
+    }
+
+    protected int countTrueClauses(boolean [] clauses){
+        int count = 0;
+        for (boolean b : clauses){
+            if (b){
+                count++;
+            }
+        }
+        return count;
+    }
 }

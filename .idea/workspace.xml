@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="Eliminar métodos sin uso">
-      <change afterPath="$PROJECT_DIR$/main/src/graph/AbstractGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/src/graph/GraphKSAT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/src/graph/GraphTSP.java" afterDir="false" />
+    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="KSAT algoritmo aproximado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/algorithms/AbstractAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/AbstractAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/algorithms/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/algorithms/ApproximationAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/ApproximationAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/AbstractGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/GraphKSAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/GraphKSAT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/GraphTSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/GraphTSP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/AbstractAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/AbstractAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/Algorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/ApproximationAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/ApproximationAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/BruteForce.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/BruteForce.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/graph/Graph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,24 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/josue/Desktop/dlp_parser",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/josue/Desktop/TFG/main/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/josue/Desktop/dlp_parser&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/josue/Desktop/TFG/main/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="graph" />
@@ -97,7 +100,8 @@
       <workItem from="1715532614952" duration="15418000" />
       <workItem from="1715729392918" duration="223000" />
       <workItem from="1715870088676" duration="3769000" />
-      <workItem from="1715939421003" duration="13121000" />
+      <workItem from="1715939421003" duration="13680000" />
+      <workItem from="1715980916760" duration="2413000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of the main data structures.">
       <option name="closed" value="true" />
@@ -227,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715896299704</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="KSAT algoritmo aproximado">
+      <option name="closed" value="true" />
+      <created>1715964153479</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715964153479</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +259,7 @@
     <MESSAGE value="Problema de aproximación solucionado" />
     <MESSAGE value="Datos de ejecución" />
     <MESSAGE value="Eliminar métodos sin uso" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eliminar métodos sin uso" />
+    <MESSAGE value="KSAT algoritmo aproximado" />
+    <option name="LAST_COMMIT_MESSAGE" value="KSAT algoritmo aproximado" />
   </component>
 </project>
