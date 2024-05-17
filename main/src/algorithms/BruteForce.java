@@ -5,6 +5,7 @@ public class BruteForce extends AbstractAlgorithm{
         super(g);
     }
 
+    @Override
     public void TSP() {
         int n = graph.length;
         int[] bestPath = null;
@@ -41,6 +42,16 @@ public class BruteForce extends AbstractAlgorithm{
         for (int j : bestPath) {
             this.visited.add(j);
         }
+    }
+
+    @Override
+    public void KSAT() {
+
+    }
+
+    @Override
+    public boolean isSatisfied() {
+        return this.satisfied;
     }
 
     private void swap(int[] array, int a, int b) {

@@ -1,12 +1,14 @@
 import algorithms.ApproximationAlgorithm;
 import algorithms.BruteForce;
-import graph.Graph;
+import graph.GraphKSAT;
+import graph.GraphTSP;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args){
 
+        /**
         String resultAP = "";
         String resultBF = "";
 
@@ -14,7 +16,7 @@ public class Main {
             resultAP += "NÚMERO DE NODOS: " + i + "\n";
             resultBF += "NÚMERO DE NODOS: " + i + "\n";
             for(int j = 0; j < 50; j++){ //Repeticiones para cada nodo
-                Graph graph = new Graph(i);
+                GraphTSP graph = new GraphTSP(i);
                 //Approximation
 
                 double start = 0.000;
@@ -48,6 +50,15 @@ public class Main {
             fwbf.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
+
+        GraphKSAT graphKSAT = new GraphKSAT(10000,10000);
+
+        //Approximation
+        ApproximationAlgorithm ap = new ApproximationAlgorithm(graphKSAT);
+        ap.KSAT();
+        System.out.println(ap.isSatisfied());
+
+        //Brute Force
     }
 }
