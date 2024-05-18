@@ -1,14 +1,12 @@
 import algorithms.ApproximationAlgorithm;
 import algorithms.BruteForce;
-import graph.GraphKSAT;
 import graph.GraphTSP;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Main {
+public class MainTSP {
     public static void main(String[] args){
 
-        /**
         String resultAP = "";
         String resultBF = "";
 
@@ -50,19 +48,6 @@ public class Main {
             fwbf.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }*/
-
-        GraphKSAT graphKSAT = new GraphKSAT(3,3);
-
-        //Approximation
-        ApproximationAlgorithm ap = new ApproximationAlgorithm(graphKSAT);
-        ap.KSAT();
-        System.out.println(ap.isSatisfied());
-
-        //Brute Force
-
-        BruteForce bf = new BruteForce(graphKSAT);
-        bf.KSAT();
-        System.out.println(bf.isSatisfied());
+        }
     }
 }

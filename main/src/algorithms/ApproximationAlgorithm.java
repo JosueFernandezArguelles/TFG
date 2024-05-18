@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class ApproximationAlgorithm extends AbstractAlgorithm{
 
-    private Random rand = new Random();
+    private final Random rand = new Random();
 
     public ApproximationAlgorithm(Graph g){
         super(g);
@@ -38,9 +38,9 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
 
     @Override
     public void KSAT() {
-        int repetitions = graph[0].length / 2;
+        int repetitions = graph[0].length / 2 + 1;  
         //Asignación aleatoria de valores
-        int [][] values = asignRandomValues();
+        int [][] values = assignRandomValues();
 
         //Evaluar la formula
         boolean [] clauses = generateClauses(values);
@@ -96,7 +96,7 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
     /**
      * Genera un valor aleatorio, -1 0 1, para cada variable.
      */
-     private int [][] asignRandomValues(){
+     private int [][] assignRandomValues(){
          int [][] values = new int[graph.length][graph[0].length];
          for(int j = 0; j < graph[0].length; j++){
              //Valor igual para cada variable
