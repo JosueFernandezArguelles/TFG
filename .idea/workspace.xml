@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="KSAT ajustes del número de variables y clausulas">
+    <list default="true" id="5dfe114a-a4b9-4e66-aa83-6eca08a31402" name="Changes" comment="Resultados KSAT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/MainKSAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/MainKSAT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/algorithms/BruteForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/AbstractGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/GraphKSAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/GraphKSAT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/graph/GraphTSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/graph/GraphTSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/MainKSAT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/MainKSAT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/algorithms/ApproximationAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/algorithms/ApproximationAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/graph/AbstractGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/graph/AbstractGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/graph/GraphKSAT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/graph/GraphKSAT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/graph/GraphTSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/graph/GraphTSP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultsKSATAP.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultsKSATBF.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +103,9 @@
       <workItem from="1715870088676" duration="3769000" />
       <workItem from="1715939421003" duration="13680000" />
       <workItem from="1715980916760" duration="3020000" />
-      <workItem from="1716041431837" duration="12095000" />
+      <workItem from="1716041431837" duration="12163000" />
+      <workItem from="1716215484579" duration="35000" />
+      <workItem from="1716547812063" duration="7201000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of the main data structures.">
       <option name="closed" value="true" />
@@ -245,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716060581627</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Resultados KSAT">
+      <option name="closed" value="true" />
+      <created>1716070097941</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716070097941</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +290,17 @@
     <MESSAGE value="KSAT algoritmo aproximado" />
     <MESSAGE value="KSAT algoritmo fuerza bruta" />
     <MESSAGE value="KSAT ajustes del número de variables y clausulas" />
-    <option name="LAST_COMMIT_MESSAGE" value="KSAT ajustes del número de variables y clausulas" />
+    <MESSAGE value="Resultados KSAT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resultados KSAT" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

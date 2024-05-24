@@ -1,5 +1,6 @@
 package algorithms;
 import graph.Graph;
+
 public class BruteForce extends AbstractAlgorithm{
     public BruteForce(Graph g){
         super(g);
@@ -98,13 +99,5 @@ public class BruteForce extends AbstractAlgorithm{
             }
         }
         return values;
-    }
-
-    private int[] extractValues(int[][] values) {
-        int[] extractedValues = new int[values[0].length];
-        for (int j = 0; j < values[0].length; j++) {
-            extractedValues[j] = values[0][j];
-        }
-        return extractedValues;
     }
 }

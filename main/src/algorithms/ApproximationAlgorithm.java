@@ -38,7 +38,7 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
 
     @Override
     public void KSAT() {
-        int repetitions = graph[0].length / 2 + 1;  
+        int repetitions = graph[0].length / 2 + 1;
         //Asignación aleatoria de valores
         int [][] values = assignRandomValues();
 
