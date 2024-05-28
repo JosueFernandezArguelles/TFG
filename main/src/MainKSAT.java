@@ -9,13 +9,12 @@ public class MainKSAT {
         String resultAP = "";
         String resultBF = "";
 
-        for (int i = 5; i < 18; i++){ // Número de variables y clausulas
+        for (int i = 5; i < 17; i++){ // Número de variables y clausulas
             resultAP += "NÚMERO DE VARIABLES: " + i + "\n";
             resultBF += "NÚMERO DE VARIABLES: " + i + "\n";
-            for(int j = 0; j < 50; j++){
+            for(int j = 0; j < 100; j++){
                 int K = 3;
-                GraphKSAT graphKSAT = new GraphKSAT( (int) 4.24*K, i, K);
-                graphKSAT.printGraph();
+                GraphKSAT graphKSAT = new GraphKSAT( (int) 4.24*i, i, K);
 
                 double start = 0.000;
                 double end = 0.000;

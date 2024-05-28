@@ -38,7 +38,7 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
 
     @Override
     public void KSAT() {
-        int repetitions = graph[0].length / 2 + 1;
+        int repetitions = graph[0].length;
         //Asignación aleatoria de valores
         int [][] values = assignRandomValues();
 
@@ -49,7 +49,7 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
         List<Integer> changedVariables = new ArrayList<>();
 
         while (repetitions-- != 0){
-            if(satisfied){ break; }
+            if(satisfied || changedVariables.size() == graph[0].length){ break; }
 
             //Cambio aletorio en una variable
             int variableToBeChanged =rand.nextInt(0, values[0].length);
@@ -66,6 +66,7 @@ public class ApproximationAlgorithm extends AbstractAlgorithm{
                 clauses = possibleNewClauses;
                 trueClauses = numberNewTrueClauses;
                 satisfied = evaluateFormula(clauses);
+                repetitions++;
             }
         }
 

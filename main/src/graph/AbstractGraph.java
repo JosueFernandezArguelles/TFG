@@ -1,7 +1,5 @@
 package graph;
 
-import java.util.Random;
-
 public abstract class AbstractGraph implements Graph{
     protected int [][] graph;
 
